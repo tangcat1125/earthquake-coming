@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>地震來了｜地震實境 RPG</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-dark">
+
+    <!-- Quake FX Overlay & Screen Flash -->
+    <div id="quake-overlay" class="quake-fx"></div>
+    <div id="rewind-portal" class="rewind-fx">
+        <div class="clock-spin"></div>
+        <div class="rewind-text">【 時 光 逆 轉 】</div>
+    </div>
+
+    <!-- App Container conforming strictly to responsive design -->
+    <div class="rpg-container">
+        
+        <!-- TOP BAR: Scene Name & People Status & Time Loop Count -->
+        <header class="top-bar">
+            <div class="brand">
+                <span class="badge-danger blink">EMERGENCY RPG</span>
+                <h1 class="game-title">地震來了</h1>
+            </div>
+            
+            <div class="status-group">
+                <div class="status-item scene-status">
+                    <span class="label">場景：</span>
+                    <span id="current-scene-name" class="value text-highlight">第一幕・普通教室・警報驟響</span>
+                </div>
+                
+                <div class="status-item survivor-status">
+                    <span class="label">人數：</span>
+                    <span id="survivor-count" class="value text-success">全校 120 人 | 傷亡 0 人</span>
+                </div>
+
+                <div class="status-item loop-status">
+                    <span class="label">迴圈狀態：</span>
+                    <span id="loop-count" class="value text-warning">迴圈 #1 (時間順暢)</span>
+                </div>
+            </div>
+
+            <div class="system-controls">
+                <span id="audio-start-notice" class="audio-notice-pill">🚨 點擊畫面啟動國家級警報</span>
+                <button id="btn-sound" class="btn-icon" title="切換音效">🔊</button>
+                <button id="btn-log" class="btn-icon" title="對話紀錄">📜 紀錄</button>
+                <button id="btn-restart" class="btn-icon btn-reload" title="重新開始">🔄 重來</button>
+            </div>
+        </header>
+
+        <!-- MAIN MIDDLE AREA: Split View (Left: Visual & Avatar & Speech | Right: Flowing Story Text) -->
+        <main class="main-panel">
+            
+            <!-- LEFT PANEL: Visuals, Scene Backdrop, Avatar, Character Speech -->
+            <section class="left-box glass-card">
+                
+                <!-- Scene Backdrop Container -->
+                <div class="scene-backdrop-container">
+                    <img id="scene-bg" src="assets/scenes/act1_classroom.png" alt="Scene Background" class="scene-bg-img">
+                    <div class="backdrop-gradient"></div>
+                    <div id="act-badge" class="act-pill-badge">第 1 幕 / 共 5 幕</div>
+                </div>
+
+                <!-- Floating Avatar (with white glow shadow) & Interactive Speech Bubble (角色說 :) -->
+                <div class="dialogue-area">
+                    <div class="avatar-floating-wrapper">
+                        <div class="avatar-glow-ring">
+                            <img id="speaker-avatar" src="assets/avatars/avatar_dean.png" alt="Character Avatar" class="speaker-img-cutout">
+                        </div>
+                        <div id="speaker-name-tag" class="speaker-name-badge">教導主任</div>
+                    </div>
+
+                    <div class="speech-bubble-box">
+                        <div class="bubble-pointer-tail"></div>
+                        <div class="speech-header">
+                            <span class="speech-label">角色說：</span>
+                            <span id="speaker-emotion-badge" class="emotion-badge danger">【驚慌極限】</span>
+                        </div>
+                        <div class="speech-content">
+                            <p id="speech-text" class="typewriter-text">「嗶嗶——！所有人注意！這是國家級警報！地震！地震來了！」</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- RIGHT PANEL: Flowing Story Text Stream with Ruby Zhuyin & Outcome Artwork Cards -->
+            <section class="right-box glass-card">
+                <div class="narrative-header">
+                    <h2 class="narrative-title">劇情演進與斷點結局 (含注音，可向上滾動閱讀)</h2>
+                    <div id="phase-badge" class="phase-pill">主震初期 (0～60秒)</div>
+                </div>
+
+                <div id="story-narrative-container" class="story-narrative-box">
+                    <!-- Pure Narrative Story Text Stream -->
+                    <div id="story-text" class="narrative-content zhuyin-enabled">
+                        <!-- Story text and act outcome artwork cards inserted dynamically -->
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- BOTTOM PANEL: Touch-Friendly Responsive Card Selection Area -->
+        <footer class="bottom-panel glass-card">
+            <div class="card-selection-header">
+                <span class="cards-title-label">卡 牌 選 項（ 請 點 擊 選 擇 應 對 策 略 ）</span>
+                <span id="timer-indicator" class="timer-pill">⏳ 決策時間：無限時演練</span>
+            </div>
+
+            <div id="card-deck" class="card-deck-container">
+                <!-- Cards dynamically populated here -->
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- History Log Modal -->
+    <div id="modal-log" class="modal-overlay hidden">
+        <div class="modal-box glass-card">
+            <div class="modal-header">
+                <h3>📜 演練歷程對話紀錄</h3>
+                <button id="btn-close-log" class="btn-close">&times;</button>
+            </div>
+            <div id="log-history-list" class="modal-body log-list">
+                <!-- Dynamic log history -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Settlement / End-Game Modal (包含了完整的災難紀錄點分析與學生對應解析) -->
+    <div id="modal-settlement" class="modal-overlay hidden">
+        <div class="modal-box settlement-box glass-card">
+            <div class="modal-header">
+                <h2 id="settlement-title">演練總結算與災難解析報告</h2>
+                <div id="settlement-badge" class="result-badge">PERFECT ENDING</div>
+            </div>
+            
+            <div class="modal-body settlement-content">
+                <div class="summary-stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-num text-success" id="stat-saved">120</span>
+                        <span class="stat-lbl">成功避難人數</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num text-danger" id="stat-injured">0</span>
+                        <span class="stat-lbl">傷亡/受困人數</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-num text-warning" id="stat-rewinds">0</span>
+                        <span class="stat-lbl">發動時光逆轉次數</span>
+                    </div>
+                </div>
+
+                <h3 class="reflection-heading">五幕災難紀錄點分析與決策檢討</h3>
+                <div id="settlement-matrix" class="matrix-table">
+                    <!-- Dynamic reflection & disaster record analysis matrix -->
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button id="btn-restart-game" class="btn-primary-lg">🔄 重新挑戰演練</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
