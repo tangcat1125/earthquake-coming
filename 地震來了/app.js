@@ -336,7 +336,7 @@ class AudioEngine {
 
 const audio = new AudioEngine();
 
-// Avatar transparency is prepared in the optimized WebP assets.
+// Avatars retain original colors and opacity; no color-based background removal.
 
 // --- Helper to ensure HTML5 <ruby> tags around all <rt> Zhuyin annotations ---
 function formatRubyZhuyin(str) {
@@ -466,7 +466,7 @@ const ACTS_DATA = [
         phaseName: "主震初期 (0～60秒)",
         bgImage: "assets/scenes/act1_classroom.webp",
         speakerName: "教導主任",
-        speakerAvatar: "assets/avatars/avatar_dean.webp",
+        speakerAvatar: "assets/avatars/avatar_dean.webp?v=original-colors-1",
         speakerEmotion: "【驚慌極限】",
         initialDialogue: "「嗶嗶——！所有人注意！這是國家級警報！地震！強震來了！」",
         initialStory: `<p><strong>【第<rt>ㄉㄧˋ</rt>一<rt>ㄧ</rt>幕<rt>ㄇㄨˋ</rt>：普<rt>ㄆㄨˇ</rt>通<rt>ㄊㄨㄥ</rt>教<rt>ㄐㄧㄠˋ</rt>室<rt>ㄕˋ</rt>・警<rt>ㄐㄧㄥˇ</rt>報<rt>ㄅㄠˋ</rt>驟<rt>ㄗㄡˋ</rt>響<rt>ㄒㄧㄤˇ</rt>】</strong></p><p>上<rt>ㄕㄤˋ</rt>課<rt>ㄎㄜˋ</rt>鐘<rt>ㄓㄨㄥ</rt>聲<rt>ㄕㄥ</rt>剛<rt>ㄍㄤ</rt>響<rt>ㄒㄧㄤˇ</rt>起<rt>ㄑㄧˇ</rt>，防<rt>ㄈㄤˊ</rt>災<rt>ㄗㄞ</rt>警<rt>ㄐㄧㄥˇ</rt>報<rt>ㄅㄠˋ</rt>無<rt>ㄨˊ</rt>預<rt>ㄩˋ</rt>警<rt>ㄐㄧㄥˇ</rt>尖<rt>ㄐㄧㄢ</rt>叫<rt>ㄐㄧㄠˋ</rt>！整<rt>ㄓㄥˇ</rt>座<rt>ㄗㄨㄛˋ</rt>校<rt>ㄒㄧㄠˋ</rt>舍<rt>ㄕㄜˋ</rt>開<rt>ㄎㄞ</rt>始<rt>ㄕˇ</rt>劇<rt>ㄐㄩˋ</rt>烈<rt>ㄌㄧㄝˋ</rt>左右<rt>ㄗㄨㄛˇㄧㄡˋ</rt>晃<rt>ㄏㄨㄤˇ</rt>動<rt>ㄉㄨㄥˋ</rt>。</p><p>走<rt>ㄗㄡˇ</rt>廊<rt>ㄌㄤˊ</rt>天<rt>ㄊㄧㄢ</rt>花<rt>ㄏㄨㄚ</rt>板<rt>ㄅㄢˇ</rt>上<rt>ㄕㄤˋ</rt>懸<rt>ㄒㄩㄢˊ</rt>掛<rt>ㄍㄨㄚˋ</rt>的<rt>ㄉㄜ</rt><strong>重<rt>ㄓㄨㄥˋ</rt>型<rt>ㄒㄧㄥˊ</rt>鐵<rt>ㄊㄧㄝˇ</rt>製<rt>ㄓˋ</rt>大<rt>ㄉㄚˋ</rt>吊<rt>ㄉㄧㄠ</rt>扇<rt>ㄕㄢˋ</rt>金<rt>ㄐㄧㄣ</rt>屬<rt>ㄕㄨˇ</rt>螺<rt>ㄌㄨㄛˊ</rt>絲<rt>ㄙ</rt>鬆<rt>ㄙㄨㄥ</rt>脫<rt>ㄊㄨㄛ</rt></strong>，正<rt>ㄓㄥˋ</rt>在<rt>ㄗㄞˋ</rt>劇<rt>ㄐㄩˋ</rt>烈<rt>ㄌㄧㄝˋ</rt>搖<rt>ㄧㄠˊ</rt>晃<rt>ㄏㄨㄤˇ</rt>中<rt>ㄓㄨㄥ</rt>應<rt>ㄧㄥ</rt>聲<rt>ㄕㄥ</rt>斷<rt>ㄉㄨㄢˋ</rt>裂<rt>ㄌㄧㄝˋ</rt>！</p>`,
@@ -482,7 +482,7 @@ const ACTS_DATA = [
         phaseName: "主震中期 (搖晃高峰)",
         bgImage: "assets/scenes/act2_lab.webp",
         speakerName: "阿凱同學",
-        speakerAvatar: "assets/avatars/avatar_student.webp",
+        speakerAvatar: "assets/avatars/avatar_student.webp?v=original-colors-1",
         speakerEmotion: "【極度恐慌】",
         initialDialogue: "「哇啊！這間教室沒有木課桌！只有塑膠折疊桌！要躲哪裡啊！？」",
         initialStory: `<p><strong>【第<rt>ㄉㄧˋ</rt>二<rt>ㄦˋ</rt>幕<rt>ㄇㄨˋ</rt>：專<rt>ㄓㄨㄢ</rt>科<rt>ㄎㄜ</rt>教<rt>ㄐㄧㄠˋ</rt>室<rt>ㄕˋ</rt>・掉<rt>ㄉㄧㄠˋ</rt>落<rt>ㄌㄨㄛˋ</rt>危<rt>ㄨㄟ</rt>機<rt>ㄐㄧ</rt>】</strong></p><p>切<rt>ㄑㄧㄝ</rt>換<rt>ㄏㄨㄢˋ</rt>至<rt>ㄓˋ</rt>綜<rt>ㄗㄨㄥ</rt>合<rt>ㄏㄜˊ</rt>教<rt>ㄐㄧㄠˋ</rt>室<rt>ㄕˋ</rt>大<rt>ㄉㄚˋ</rt>樓<rt>ㄌㄡˊ</rt>。劇<rt>ㄐㄩˋ</rt>烈<rt>ㄌㄧㄝˋ</rt>橫<rt>ㄏㄥˊ</rt>搖<rt>ㄧㄠˊ</rt>進<rt>ㄐㄧㄣˋ</rt>入<rt>ㄖㄨˋ</rt>高<rt>ㄍㄠ</rt>峰<rt>ㄈㄥ</rt>，整<rt>ㄓㄥˇ</rt>棟<rt>ㄉㄨㄥˋ</rt>校<rt>ㄒㄧㄠˋ</rt>舍<rt>ㄕㄜˋ</rt>劇<rt>ㄐㄩˋ</rt>烈<rt>ㄌㄧㄝˋ</rt>震<rt>ㄓㄣˋ</rt>顫<rt>ㄓㄢˋ</rt>。</p><p>這<rt>ㄓㄜˋ</rt>間<rt>ㄐㄧㄢ</rt>教<rt>ㄐㄧㄠˋ</rt>室<rt>ㄕˋ</rt>沒<rt>ㄇㄟˊ</rt>有<rt>ㄧㄡˇ</rt>木<rt>ㄇㄨˋ</rt>製<rt>ㄓˋ</rt>個<rt>ㄍㄜˋ</rt>人<rt>ㄖㄣˊ</rt>課<rt>ㄎㄜˋ</rt>桌<rt>ㄓㄨㄛ</rt>，學<rt>ㄒㄩㄝˊ</rt>生<rt>ㄕㄥ</rt>看<rt>ㄎㄢˋ</rt>見<rt>ㄐㄧㄢˋ</rt>前<rt>ㄑㄧㄢˊ</rt>方<rt>ㄈㄤ</rt>擺<rt>ㄅㄞˇ</rt>著<rt>ㄓㄜ˙</rt>幾<rt>ㄐㄧˇ</rt>張<rt>ㄓㄨㄤ</rt>大<rt>ㄉㄚˋ</rt>型<rt>ㄒㄧㄥˊ</rt>長<rt>ㄔㄤˊ</rt>條<rt>ㄊㄧㄠˊ</rt>折<rt>ㄓㄜˊ</rt>疊<rt>ㄉㄧㄝˊ</rt>桌<rt>ㄓㄨㄛ</rt>，有<rt>ㄧㄡˇ</rt>人<rt>ㄖㄣˊ</rt>驚<rt>ㄐㄧㄥ</rt>慌<rt>ㄏㄨㄤ</rt>喊<rt>ㄏㄢˇ</rt>：「鑽<rt>ㄗㄨㄢ</rt>桌<rt>ㄓㄨㄛ</rt>底<rt>ㄉㄧˇ</rt>！」一<rt>ㄧ</rt>群<rt>ㄑㄩㄣˊ</rt>學<rt>ㄕㄥ</rt>立<rt>ㄌㄧˋ</rt>刻<rt>ㄎㄜˋ</rt>擠<rt>ㄐㄧˇ</rt>進<rt>ㄐㄧㄣˋ</rt>折<rt>ㄓㄜˊ</rt>疊<rt>ㄉㄧㄝˊ</rt>桌<rt>ㄓㄨㄛ</rt>下<rt>ㄒㄧㄚˋ</rt>方<rt>ㄈㄤ</rt>避<rt>ㄅㄧˋ</rt>難<rt>ㄋㄢˋ</rt>。</p><p>劇<rt>ㄐㄩˋ</rt>烈<rt>ㄌㄧㄝˋ</rt>搖<rt>ㄧㄠˊ</rt>晃<rt>ㄏㄨㄤˇ</rt>中<rt>ㄓㄨㄥ</rt>，天<rt>ㄊㄧㄢ</rt>花<rt>ㄏㄨㄚ</rt>板<rt>ㄅㄢˇ</rt>懸<rt>ㄒㄩㄢˊ</rt>掛<rt>ㄍㄨㄚˋ</rt>的<rt>ㄉㄜ</rt><strong>重<rt>ㄓㄨㄥˋ</rt>型<rt>ㄒㄧㄥˊ</rt>投<rt>ㄊㄡˊ</rt>影<rt>ㄧㄥˇ</rt>機<rt>ㄐㄧ</rt>連<rt>ㄌㄧㄢˊ</rt>同<rt>ㄊㄨㄥˊ</rt>金<rt>ㄐㄧㄣ</rt>屬<rt>ㄕㄨˇ</rt>吊<rt>ㄉㄧㄠ</rt>架<rt>ㄐㄧㄚˋ</rt>應<rt>ㄧㄥ</rt>聲<rt>ㄕㄥ</rt>扯<rt>ㄔㄜˇ</rt>斷<rt>ㄉㄨㄢˋ</rt>墜<rt>ㄓㄨㄟˋ</rt>落<rt>ㄌㄨㄛˋ</rt></strong>，「轟」一<rt>ㄧ</rt>聲<rt>ㄕㄥ</rt>重<rt>ㄓㄨㄥˋ</rt>重<rt>ㄓㄨㄥˋ</rt>砸<rt>ㄗㄚˊ</rt>在<rt>ㄗㄞˋ</rt>折<rt>ㄓㄜˊ</rt>疊<rt>ㄉㄧㄝˊ</rt>桌<rt>ㄓㄨㄛ</rt>正<rt>ㄓㄥˋ</rt>中<rt>ㄓㄨㄥ</rt>央<rt>ㄧㄤ</rt>！折<rt>ㄓㄜˊ</rt>疊<rt>ㄉㄧㄝˊ</rt>桌<rt>ㄓㄨㄛ</rt>塌<rt>ㄊㄚ</rt>陷<rt>ㄒㄧㄢˋ</rt>將<rt>ㄐㄧㄤ</rt>躲<rt>ㄉㄨㄛˇ</rt>在<rt>ㄗㄞˋ</rt>下<rt>ㄒㄧㄚˋ</rt>方<rt>ㄈㄤ</rt>的<rt>ㄉㄜ</rt>數<rt>ㄕㄨˋ</rt>名<rt>ㄇㄧㄥˊ</rt>學<rt>ㄒㄩㄝˊ</rt>生<rt>ㄕㄥ</rt>夾<rt>ㄐㄧㄚˊ</rt>傷<rt>ㄕㄤ</rt>！</p>`,
@@ -498,7 +498,7 @@ const ACTS_DATA = [
         phaseName: "主震停止撤離中 (向下逃生)",
         bgImage: "assets/scenes/act3_stairwell.webp",
         speakerName: "四年級阿凱",
-        speakerAvatar: "assets/avatars/avatar_student.webp",
+        speakerAvatar: "assets/avatars/avatar_student.webp?v=original-colors-1",
         speakerEmotion: "【極度恐慌】",
         initialDialogue: "「綜合大樓傳來哭聲：『救命啊！門推不開！』大樓是不是要塌了！？快跑啊啊啊！」",
         initialStory: `<p><strong>【第<rt>ㄉㄧˋ</rt>三<rt>ㄙㄢ</rt>幕<rt>ㄇㄨˋ</rt>：樓<rt>ㄌㄡˊ</rt>梯<rt>ㄊㄧ</rt>疏<rt>ㄕㄨ</rt>散<rt>ㄙㄢˋ</rt>・恐<rt>ㄎㄨㄥˇ</rt>慌<rt>ㄏㄨㄤ</rt>傳<rt>ㄔㄨㄢˊ</rt>染<rt>ㄖㄢˇ</rt>】</strong></p><p>主<rt>ㄓㄨˇ</rt>震<rt>ㄓㄣˋ</rt>停<rt>ㄊㄧㄥˊ</rt>止<rt>ㄓˇ</rt>，警<rt>ㄐㄧㄥˇ</rt>報<rt>ㄅㄠˋ</rt>暫<rt>ㄗㄢˋ</rt>歇<rt>ㄒㄧㄝ</rt>。各<rt>ㄍㄜˋ</rt>班<rt>ㄅㄢ</rt>開<rt>ㄎㄞ</rt>始<rt>ㄕˇ</rt>走<rt>ㄗㄡˇ</rt>出<rt>ㄔㄨ</rt>教<rt>ㄐㄧㄠˋ</rt>室<rt>ㄕˋ</rt>，依<rt>ㄧ</rt>序<rt>ㄒㄩˋ</rt>順<rt>ㄕㄨㄣˋ</rt>著<rt>ㄓㄜ˙</rt>狹<rt>ㄒㄧㄚˊ</rt>窄<rt>ㄗㄞˇ</rt>樓<rt>ㄌㄡˊ</rt>梯<rt>ㄊㄧ</rt>往<rt>ㄨㄤˇ</rt>一<rt>ㄧ</rt>樓<rt>ㄌㄡˊ</rt>操<rt>ㄘㄠ</rt>場<rt>ㄘㄤˇ</rt>撤<rt>ㄔㄜˋ</rt>離<rt>ㄌㄧˊ</rt>。</p><p>此<rt>ㄙˇ</rt>時<rt>ㄕˊ</rt>，<strong>綜<rt>ㄗㄨㄥ</rt>合<rt>ㄏㄜˊ</rt>教<rt>ㄐㄧㄠˋ</rt>室<rt>ㄕˋ</rt>大<rt>ㄉㄚˋ</rt>樓<rt>ㄌㄡˊ</rt>傳<rt>ㄔㄨㄢˊ</rt>來<rt>ㄌㄞˊ</rt>同<rt>ㄊㄨㄥˊ</rt>伴<rt>ㄅㄢˋ</rt>的<rt>ㄉㄜ</rt>淒<rt>ㄑㄧ</rt>厲<rt>ㄌㄧˋ</rt>哭<rt>ㄎㄨ</rt>喊<rt>ㄏㄢˇ</rt>：「救<rt>ㄐㄧㄡˋ</rt>命<rt>ㄇㄧㄥˋ</rt>啊<rt>ㄚ</rt>！我<rt>ㄨㄛˇ</rt>被<rt>ㄅㄟˋ</rt>壓<rt>ㄧㄚ</rt>到<rt>ㄉㄠˋ</rt>了<rt>ㄌㄜ˙</rt>！門<rt>ㄇㄣˊ</rt>推<rt>ㄊㄨㄟ</rt>不<rt>ㄅㄨˋ</rt>開<rt>ㄎㄞ</rt>！」</strong></p><p>走<rt>ㄗㄡˇ</rt>在<rt>ㄗㄞˋ</rt>隊<rt>ㄉㄨㄟˋ</rt>伍<rt>ㄨˇ</rt>中<rt>ㄓㄨㄥ</rt>間<rt>ㄐㄧㄢ</rt>的<rt>ㄉㄜ</rt>四<rt>ㄙˋ</rt>年<rt>ㄋㄧㄢˊ</rt>級<rt>ㄐㄧˊ</rt>阿<rt>ㄚ</rt>凱<rt>ㄎㄞˇ</rt>聽<rt>ㄊㄧㄥ</rt>見<rt>ㄐㄧㄢˋ</rt>哭<rt>ㄎㄨ</rt>聲<rt>ㄕㄥ</rt>瞬<rt>ㄕㄨㄣˋ</rt>間<rt>ㄐㄧㄢ</rt>慌<rt>ㄏㄨㄤ</rt>了<rt>ㄌㄜ˙</rt>，大<rt>ㄉㄚˋ</rt>喊<rt>ㄏㄢˇ</rt>：「大<rt>ㄉㄚˋ</rt>樓<rt>ㄌㄡˊ</rt>要<rt>ㄧㄠˋ</rt>塌<rt>ㄊㄚ</rt>了<rt>ㄌㄜ˙</rt>！快<rt>ㄎㄨㄞˋ</rt>跑<rt>ㄆㄠˇ</rt>啊<rt>ㄚ</rt>！」並<rt>ㄅㄧㄥˋ</rt>失<rt>ㄕ</rt>控<rt>ㄎㄨㄥˋ</rt>往<rt>ㄨㄤˇ</rt>前<rt>ㄑㄧㄢˊ</rt>猛<rt>ㄇㄥˇ</rt>推<rt>ㄊㄨㄟ</rt>；前<rt>ㄑㄧㄢˊ</rt>方<rt>ㄈㄤ</rt>同<rt>ㄊㄨㄥˊ</rt>學<rt>ㄒㄩㄝˊ</rt>被<rt>ㄅㄟˋ</rt>推<rt>ㄊㄨㄟ</rt>得<rt>ㄉㄜ˙</rt>跌<rt>ㄉㄧㄝ</rt>倒<rt>ㄉㄠˇ</rt>，<strong>好<rt>ㄏㄠˇ</rt>幾<rt>ㄐㄧˇ</rt>個<rt>ㄍㄜ˙</rt>同<rt>ㄊㄨㄥˊ</rt>學<rt>ㄒㄩㄝˊ</rt>被<rt>ㄅㄟˋ</rt>踩<rt>ㄘㄞˇ</rt>傷<rt>ㄕㄤ</rt>骨<rt>ㄍㄨˇ</rt>折<rt>ㄓㄜˊ</rt></strong>！</p>`,
@@ -514,7 +514,7 @@ const ACTS_DATA = [
         phaseName: "疏散半途無遮蔽危機",
         bgImage: "assets/scenes/act4_corridor.webp",
         speakerName: "帶隊老師",
-        speakerAvatar: "assets/avatars/avatar_dean.webp",
+        speakerAvatar: "assets/avatars/avatar_dean.webp?v=original-colors-1",
         speakerEmotion: "【緊急戒備】",
         initialDialogue: "「嗶嗶——！警報二度尖叫！6 級餘震爆發！前方學生以為衝到外面空地就安全，正拔腿狂衝！」",
         initialStory: `<p><strong>【第<rt>ㄉㄧˋ</rt>四<rt>ㄙˋ</rt>幕<rt>ㄇㄨˋ</rt>：一<rt>ㄧ</rt>樓<rt>ㄌㄡˊ</rt>走<rt>ㄗㄡˇ</rt>廊<rt>ㄌㄤˊ</rt>・強<rt>ㄑㄧㄤˊ</rt>烈<rt>ㄌㄧㄝˋ</rt>餘<rt>ㄩˊ</rt>震<rt>ㄓㄣˋ</rt>】</strong></p><p>隊<rt>ㄉㄨㄟˋ</rt>伍<rt>ㄨˇ</rt>剛<rt>ㄍㄤ</rt>走<rt>ㄗㄡˇ</rt>上<rt>ㄕㄤˋ</rt>一<rt>ㄧ</rt>樓<rt>ㄌㄡˊ</rt>走<rt>ㄗㄡˇ</rt>廊<rt>ㄌㄤˊ</rt>、準<rt>ㄓㄨㄣˇ</rt>備<rt>ㄅㄟˋ</rt>走<rt>ㄗㄡˇ</rt>出<rt>ㄔㄨ</rt>校<rt>ㄒㄧㄠˋ</rt>舍<rt>ㄕㄜˋ</rt>大<rt>ㄉㄚˋ</rt>門<rt>ㄇㄣˊ</rt>時<rt>ㄕˊ</rt>，警<rt>ㄐㄧㄥˇ</rt>報<rt>ㄅㄠˋ</rt>無<rt>ㄨˊ</rt>預<rt>ㄩˋ</rt>警<rt>ㄐㄧㄥˇ</rt>二<rt>ㄦˋ</rt>度<rt>ㄉㄨˋ</rt>尖<rt>ㄐㄧㄢ</rt>叫<rt>ㄐㄧㄠˋ</rt>！6 級<rt>ㄐㄧˊ</rt>強<rt>ㄑㄧㄤˊ</rt>烈<rt>ㄌㄧㄝˋ</rt>餘<rt>ㄩˊ</rt>震<rt>ㄓㄣˋ</rt>瞬<rt>ㄕㄨˋ</rt>間<rt>ㄐㄧㄢ</rt>爆<rt>ㄅㄠˋ</rt>發<rt>ㄈㄚ</rt>！</p><p>走<rt>ㄗㄡˇ</rt>在<rt>ㄗㄞˋ</rt>前<rt>ㄑㄧㄢˊ</rt>面<rt>ㄇㄧㄢˋ</rt>的<rt>ㄉㄜ</rt>學<rt>ㄒㄩㄝˊ</rt>生<rt>ㄕㄥ</rt>慌<rt>ㄏㄨㄤ</rt>了<rt>ㄌㄜ˙</rt>手<rt>ㄕㄡˇ</rt>腳<rt>ㄐㄧㄠˇ</rt>，直<rt>ㄓˊ</rt>覺<rt>ㄐㄧㄨㄝˊ</rt>以<rt>ㄧˇ</rt>為<rt>ㄨㄟˊ</rt>「衝<rt>ㄨㄥ</rt>出<rt>ㄔㄨ</rt>走<rt>ㄗㄡˇ</rt>廊<rt>ㄌㄤˊ</rt>就<rt>ㄐㄧㄡˋ</rt>安<rt>ㄢ</rt>全<rt>ㄑㄨㄢˊ</rt>了<rt>ㄌㄜ˙</rt>」，拔<rt>ㄅㄚˊ</rt>腿<rt>ㄊㄨㄟˇ</rt>往<rt>ㄨㄞˋ</rt>面<rt>ㄇㄧㄢˋ</rt>空<rt>ㄎㄨㄥ</rt>地<rt>ㄉㄧˋ</rt>衝<rt>ㄨㄥ</rt>去<rt>ㄑㄩˋ</rt>。</p><p>強<rt>ㄑㄧㄤˊ</rt>震<rt>ㄓㄣˋ</rt>瞬<rt>ㄕㄨˋ</rt>間<rt>ㄐㄧㄢ</rt>震<rt>ㄓㄣˋ</rt>裂<rt>ㄌㄧㄝˋ</rt>校<rt>ㄒㄧㄠˋ</rt>舍<rt>ㄕㄜˋ</rt>斜<rt>ㄒㄧㄝˊ</rt>屋<rt>ㄨ</rt>頂<rt>ㄉㄧㄥˇ</rt>邊<rt>ㄅㄧㄢ</rt>緣<rt>ㄩㄢˊ</rt>，<strong>大<rt>ㄉㄚˋ</rt>量<rt>ㄌㄧㄤˋ</rt>厚<rt>ㄏㄡˋ</rt>重<rt>ㄓㄨㄥˋ</rt>的<rt>ㄉㄜ</rt>屋<rt>ㄨ</rt>瓦<rt>ㄨㄚˇ</rt>與<rt>ㄩˇ</rt>磁<rt>ㄘˊ</rt>磚<rt>ㄓㄨㄢ</rt>崩<rt>ㄅㄥ</rt>落<rt>ㄌㄨㄛˋ</rt>砸<rt>ㄗㄚˊ</rt>下<rt>ㄒㄧㄚˋ</rt></strong>，衝<rt>ㄨㄥ</rt>出<rt>ㄔㄨ</rt>走<rt>ㄗㄡˇ</rt>廊<rt>ㄌㄤˊ</rt>的<rt>ㄉㄜ</rt>學<rt>ㄒㄩㄝˊ</rt>生<rt>ㄕㄥ</rt>當<rt>ㄉㄤ</rt>場<rt>ㄔㄤˇ</rt>被<rt>ㄅㄟˋ</rt>砸<rt>ㄗㄚˊ</rt>倒<rt>ㄉㄠˇ</rt>重<rt>ㄓㄨㄥˋ</rt>傷<rt>ㄕㄤ</rt>！</p>`,
@@ -530,7 +530,7 @@ const ACTS_DATA = [
         phaseName: "最後一哩回報危機",
         bgImage: "assets/scenes/act5_playground.webp",
         speakerName: "指揮官（校長）",
-        speakerAvatar: "assets/avatars/avatar_principal.webp",
+        speakerAvatar: "assets/avatars/avatar_principal.webp?v=original-colors-1",
         speakerEmotion: "【嚴肅指揮】",
         initialDialogue: "「各班注意！到達草地迅速坐下！各班幹部立刻進行實名清點，精確回報！」",
         initialStory: `<p><strong>【第<rt>ㄉㄧˋ</rt>五<rt>ㄨˇ</rt>幕<rt>ㄇㄨˋ</rt>：操<rt>ㄘㄠ</rt>場<rt>ㄔㄤˇ</rt>集<rt>ㄐㄧˊ</rt>結<rt>ㄐㄧㄝˊ</rt>・疏<rt>ㄕㄨ</rt>散<rt>ㄙㄢˋ</rt>點<rt>ㄉㄧㄢˇ</rt>名<rt>ㄇㄧㄥˊ</rt>】</strong></p><p>餘<rt>ㄩˊ</rt>震<rt>ㄓㄣˋ</rt>停<rt>ㄊㄧㄥˊ</rt>止<rt>ㄓˇ</rt>後<rt>ㄏㄡˋ</rt>，隊<rt>ㄉㄨㄟˋ</rt>伍<rt>ㄨˇ</rt>終<rt>ㄓㄨㄥ</rt>於<rt>ㄩˊ</rt>陸<rt>ㄌㄨˋ</rt>續<rt>ㄒㄩˋ</rt>抵<rt>ㄉㄧˇ</rt>達<rt>ㄉㄚˊ</rt>操<rt>ㄘㄠ</rt>場<rt>ㄔㄤˇ</rt>中<rt>ㄓㄨㄥ</rt>央<rt>ㄧㄤ</rt>的<rt>ㄉㄜ</rt>安<rt>ㄢ</rt>全<rt>ㄑㄨㄢˊ</rt>避<rt>ㄅㄧˋ</rt>難<rt>ㄋㄢˋ</rt>區<rt>ㄑㄩ</rt>。</p><p>到了空<rt>ㄎㄨㄥ</rt>曠<rt>ㄎㄨㄤˋ</rt>草<rt>ㄘㄠˇ</rt>地<rt>ㄉㄧˋ</rt>，班<rt>ㄅㄢ</rt>長<rt>ㄓㄨㄤ</rt>沒<rt>ㄇㄟˊ</rt>有<rt>ㄧㄡˇ</rt>認<rt>ㄖㄣˋ</rt>真<rt>ㄓㄣ</rt>核<rt>ㄏㄜˊ</rt>對<rt>ㄉㄨˋ</rt>人<rt>ㄖㄣˊ</rt>數<rt>ㄕㄨˋ</rt>，完<rt>ㄨㄢˊ</rt>全<rt>ㄑㄩㄢˊ</rt>沒<rt>ㄇㄟˊ</rt>人<rt>ㄖㄣˊ</rt>注<rt>ㄓㄨˋ</rt>意<rt>ㄧˋ</rt>到<rt>ㄉㄠˋ</rt><strong>四<rt>ㄙˋ</rt>年<rt>ㄋㄧㄢˊ</rt>級<rt>ㄐㄧˊ</rt>導<rt>ㄉㄠˇ</rt>師<rt>ㄕ</rt>在<rt>ㄗㄞˋ</rt>二<rt>ㄦˋ</rt>樓<rt>ㄌㄡˊ</rt>走<rt>ㄗㄡˇ</rt>廊<rt>ㄌㄤˊ</rt>腳<rt>ㄐㄧㄠˇ</rt>踝<rt>ㄋㄧㄡˇ</rt>傷<rt>ㄕㄤ</rt>跌<rt>ㄉㄧㄝ</rt>倒<rt>ㄉㄠˇ</rt>，根<rt>ㄍㄣ</rt>本<rt>ㄅㄣˇ</rt>沒<rt>ㄇㄟˊ</rt>有<rt>ㄧㄡˇ</rt>跟<rt>ㄍㄣ</rt>著<rt>ㄓㄜ˙</rt>隊<rt>ㄉㄨㄟˋ</rt>伍<rt>ㄨˇ</rt>走<rt>ㄗㄡˇ</rt>出<rt>ㄔㄨ</rt>來<rt>ㄌㄞˊ</rt></strong>！</p><p>校<rt>ㄒㄧㄠˋ</rt>長<rt>ㄓㄨㄤ</rt>在<rt>ㄗㄞˋ</rt>司<rt>ㄙ</rt>令<rt>ㄌㄧㄥˋ</rt>台<rt>ㄊㄞˊ</rt>催<rt>ㄘㄨㄟ</rt>促<rt>ㄘㄨˋ</rt>，班<rt>ㄅㄢ</rt>長<rt>ㄓㄨㄤ</rt>隨<rt>ㄙㄨㄟˊ</rt>便<rt>ㄅㄧㄢˋ</rt>看<rt>ㄎㄢˋ</rt>了<rt>ㄌㄜ˙</rt>一<rt>ㄧ</rt>眼<rt>ㄧㄢˇ</rt>，高<rt>ㄍㄠ</rt>聲<rt>ㄕㄥ</rt>回<rt>ㄏㄨㄟˊ</rt>報<rt>ㄅㄠˋ</rt>：「四<rt>ㄙˋ</rt>年<rt>ㄋㄧㄢˊ</rt>級<rt>ㄐㄧˊ</rt>全<rt>ㄑㄩㄢˊ</rt>員<rt>ㄩㄢˊ</rt>到<rt>ㄉㄠˋ</rt>齊<rt>ㄑㄧˊ</rt>！」受<rt>ㄕㄡˋ</rt>困<rt>ㄎㄨㄣˋ</rt>導<rt>ㄉㄠˇ</rt>師<rt>ㄕ</rt>未<rt>ㄨㄟˋ</rt>列<rt>ㄌㄧㄝˋ</rt>失<rt>ㄕ</rt>蹤<rt>ㄗㄨㄥ</rt>名<rt>ㄇㄧㄥˊ</rt>單<rt>ㄉㄢ</rt>，錯<rt>ㄘㄨㄛˋ</rt>失<rt>ㄕ</rt>黃<rt>ㄏㄨㄤˊ</rt>金<rt>ㄐㄧㄣ</rt>搜<rt>ㄙㄡ</rt>救<rt>ㄐㄧㄡˋ</rt>時<rt>ㄕˊ</rt>機<rt>ㄐㄧ</rt>。</p>`,
